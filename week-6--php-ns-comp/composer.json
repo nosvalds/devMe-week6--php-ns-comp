@@ -2,5 +2,7 @@
     "autoload" : {
         "psr-4": {"App\\": "app/"}
     },
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^5.0"
+    }
 }
