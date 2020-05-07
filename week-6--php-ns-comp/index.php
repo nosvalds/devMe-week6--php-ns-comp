@@ -93,3 +93,11 @@ $jasmine = new Peep("Jasmine", "1954-12-28");
 $walker = new Peep("Walker", "1994-01-12");
 
 dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
+
+echo "\nTricksy Question 2\n";
+// use the factory to create a Faker\Generator instance
+$faker = Faker\Factory::create();
+
+// generate data by accessing properties
+echo $faker->name;
+  // 'Lucy Cechtelar';
