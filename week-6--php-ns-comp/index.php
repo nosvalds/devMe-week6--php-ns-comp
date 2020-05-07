@@ -5,6 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/vendor/autoload.php';
  
 use Illuminate\Support\Collection;
+use Carbon\Carbon;
 
 echo "\nQuestion 1:\n";
 
@@ -71,7 +72,6 @@ dump($shelf->titles()); // array:3 [ 0 => "Zero: The Biography of a Dangerous Id
 echo "\nQuestion 6:\n";
 
 use App\Library\Library;
-use Carbon\Carbon;
 
 $badLibrary = new Library();
 $badLibrary->addShelf($shelf);
