@@ -15,4 +15,16 @@ class Shelf
         $this->books[] = $book;
         return $this;
     }
+
+    // display titles on the shelf
+    public function titles() : array
+    {
+        $titles = [];
+        
+        foreach ($this->books as $book) {
+            $titles[] = $book->getTitle();
+        }
+
+        return $titles;
+    }
 }

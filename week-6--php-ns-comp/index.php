@@ -3,9 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
-
-use Illuminate\Support\Collection;
-
+ 
 echo "\nQuestion 1:\n";
 
 use App\Hello;

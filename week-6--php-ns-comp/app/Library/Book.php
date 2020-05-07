@@ -30,4 +30,10 @@ class Book
     {
         return $this->pagesRead;
     }
+
+    // get title
+    public function getTitle()
+    {
+        return $this->title;
+    }
 }
