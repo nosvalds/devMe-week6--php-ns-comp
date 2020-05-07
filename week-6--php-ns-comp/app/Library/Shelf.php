@@ -5,26 +5,29 @@ namespace App\Library;
 class Shelf
 {
     // properties
-    private $books = [];
+    private $books;
+
+    // constructor
+    public function __construct()
+    {
+        $this->books = collect(); // define empty collection
+    }
 
     // methods
 
     // add Book to shelf
     public function addBook(Book $book) : Shelf
     {
-        $this->books[] = $book;
+        $this->books->push($book);
         return $this;
     }
 
     // display titles on the shelf
     public function titles() : array
     {
-        $titles = [];
-        
-        foreach ($this->books as $book) {
-            $titles[] = $book->getTitle();
-        }
+        return $this->books->map(function ($book) {
+            return $book->getTitle();
+        })->all();
 
-        return $titles;
     }
 }
