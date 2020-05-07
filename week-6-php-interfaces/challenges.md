@@ -76,7 +76,7 @@ To check your answers run `php bootstrap.php`.
     }
     ```
 
-1) Create an `Extrude` class in the `App\Shapes` namespace. On construction it should take a class that implements `ShapeInterface` as well as a depth. It should have a `volume()` method which returns the volume (area &times; depth) of the given shape. Make sure you use type-hinting to make sure you can't pass non-shapes into `Extrude`.
+2) Create an `Extrude` class in the `App\Shapes` namespace. On construction it should take a class that implements `ShapeInterface` as well as a depth. It should have a `volume()` method which returns the volume (area &times; depth) of the given shape. Make sure you use type-hinting to make sure you can't pass non-shapes into `Extrude`.
 
     ```php
     public function extrude()
@@ -109,7 +109,7 @@ To check your answers run `php bootstrap.php`.
     }
     ```
 
-1) Copy across your `Book`, `Shelf`, and `Library` classes from yesterday. Keep them in the `App\Library` namespace.
+3) Copy across your `Book`, `Shelf`, and `Library` classes from yesterday. Keep them in the `App\Library` namespace.
 
     Now create a `Titled` interface with a `public function title()` method signature.
 
