@@ -26,7 +26,7 @@ class Library
     // display all the titles in the library
     public function titles() : array
     {
-        return $this->shelves->reduce(function ($allTitles, $shelf) {
+        return $this->shelves->reduce(function ($allTitles, Shelf $shelf) {
             return $allTitles->merge($shelf->titles());
         },collect())->all();
     }

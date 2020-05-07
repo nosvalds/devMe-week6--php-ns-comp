@@ -25,7 +25,7 @@ class Shelf
     // display titles on the shelf
     public function titles() : array
     {
-        return $this->books->map(function ($book) {
+        return $this->books->map(function (Book $book) {
             return $book->getTitle();
         })->all();
 
