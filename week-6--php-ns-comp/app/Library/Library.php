@@ -17,14 +17,17 @@ class Library
     // methods
 
     // add a shelf to the library
-    public function addShelf(Shelf $shelf)
+    public function addShelf(Shelf $shelf) : Library
     {
         $this->shelves->push($shelf);
+        return $this;
     }
 
     // display all the titles in the library
-    public function titles()
+    public function titles() : array
     {
-        return $this; // map titles() on each shelf and concat?
+        return $this->shelves->reduce(function ($allTitles, $shelf) {
+            return $allTitles->merge($shelf->titles());
+        },collect())->all();
     }
 }
