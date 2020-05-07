@@ -71,6 +71,7 @@ dump($shelf->titles()); // array:3 [ 0 => "Zero: The Biography of a Dangerous Id
 echo "\nQuestion 6:\n";
 
 use App\Library\Library;
+use Carbon\Carbon;
 
 $badLibrary = new Library();
 $badLibrary->addShelf($shelf);
@@ -82,3 +83,13 @@ $otherShelf->addBook(new Book("Delusions of Gender", 338));
 $badLibrary->addShelf($otherShelf);
 
 dump($badLibrary->titles()); // array:5 [ 0 => "Zero: The Biography of a Dangerous Idea" 1 => "The Catcher in the Rye" 2 => "Stamped from the Beginning" 3 => "The Power Broker" 4 => "Delusions of Gender" ]
+
+echo "\nTricksy Question 1\n";
+
+use App\People\Person as Peep;
+
+$alfred = new Peep("Alfred", "1967-04-03");
+$jasmine = new Peep("Jasmine", "1954-12-28");
+$walker = new Peep("Walker", "1994-01-12");
+
+dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
