@@ -11,7 +11,6 @@ class Library
     public function __construct()
     {
         $this->shelves = collect();
-
     }
 
     // methods
@@ -26,7 +25,7 @@ class Library
     // display all the titles in the library
     public function titles() : array
     {
-        return $this->shelves->reduce(function ($allTitles, Shelf $shelf) {
+        return $this->shelves->reduce(function ($allTitles, Shelf $shelf) { // flatmap() is method that could do this w/o the merge(). Or use map() then flatten().
             return $allTitles->merge($shelf->titles());
         },collect())->all();
     }

@@ -16,7 +16,7 @@ class Shelf
     // methods
 
     // add Book to shelf
-    public function addBook(Book $book) : Shelf
+    public function addBook(Book $book) : Shelf // since Book is in the same namespace this is found by PHP without us explicitly telling PHP where it is.
     {
         $this->books->push($book);
         return $this;
@@ -28,6 +28,5 @@ class Shelf
         return $this->books->map(function (Book $book) {
             return $book->getTitle();
         })->all();
-
     }
 }
