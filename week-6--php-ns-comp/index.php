@@ -94,20 +94,40 @@ $walker = new Peep("Walker", "1994-01-12");
 
 dump(Peep::getAges([$alfred, $jasmine, $walker])); // [52, 65, 15] (or there abouts)
 
-echo "\nTricksy Question 2\n";
+echo "\nTricksy Question 2a\n";
 // use the factory to create a Faker\Generator instance
 $faker = Faker\Factory::create();
 
 // generate data by accessing properties
 dump($faker->name);
-  // 'Lucy Cechtelar';
+  // E.g. 'Lucy Cechtelar';
 
 $person1 = new Peep($faker->name, $faker->date);
 $person2 = new Peep($faker->name, $faker->date);
 $person3 = new Peep($faker->name, $faker->date);
 
-dump($person1,
-    $person2,
-    $person3);
+// dump($person1,
+//     $person2,
+//     $person3);
 
-dump(Peep::getAges([$person1, $person2, $person3])); // [52, 65, 15] (or there abouts)
+dump(Peep::getAges([$person1, $person2, $person3])); // random array
+
+echo "\nTricksy Question 2b\n";
+// use the factory to create a Faker\Generator instance
+$faker = Faker\Factory::create();
+$faker->seed(1234);
+
+// generate data by accessing properties
+dump($faker->name);
+  // "Miss Lorna Dibbert" ;
+
+$person1 = new Peep($faker->name, $faker->date);
+$person2 = new Peep($faker->name, $faker->date);
+$person3 = new Peep($faker->name, $faker->date);
+
+// dump($person1,
+//     $person2,
+//     $person3);
+
+dump(Peep::getAges([$person1, $person2, $person3])); // random array
+
