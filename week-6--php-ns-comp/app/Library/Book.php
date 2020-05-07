@@ -7,7 +7,7 @@ class Book
     // properties
     private $title;
     private $totalPages;
-    private $pagesRead = 1;
+    private $currentPage = 1;
 
     // constructor
     public function __construct(string $title, int $totalPages)
@@ -21,14 +21,14 @@ class Book
     // read a number of pages
     public function read(int $pagesRead) : Book
     {
-        $this->pagesRead += $pagesRead;
+        $this->currentPage += $pagesRead;
         return $this;
     }
 
     // what page am I on?
     public function currentPage() : int
     {
-        return $this->pagesRead;
+        return $this->currentPage;
     }
 
     // get title
