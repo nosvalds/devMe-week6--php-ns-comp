@@ -55,7 +55,7 @@ $book->read(12);
 dump($book->currentPage()); // 13 - start on page 1
 
 // read another 25 pages
-$book->read(25);
+$book->read(250);
 dump($book->currentPage()); // 38
 
 echo "\nQuestion 5:\n";

@@ -21,7 +21,12 @@ class Book
     // read a number of pages
     public function read(int $pagesRead) : Book
     {
-        $this->currentPage += $pagesRead;
+        $current = $this->currentPage + $pagesRead;
+        if ($current >= $this->totalPages) {
+            $this->currentPage = $this->totalPages;
+        } else {
+            $this->currentPage = $current;
+        }
         return $this;
     }
 
