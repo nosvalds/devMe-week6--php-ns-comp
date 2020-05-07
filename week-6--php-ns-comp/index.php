@@ -99,5 +99,15 @@ echo "\nTricksy Question 2\n";
 $faker = Faker\Factory::create();
 
 // generate data by accessing properties
-echo $faker->name;
+dump($faker->name);
   // 'Lucy Cechtelar';
+
+$person1 = new Peep($faker->name, $faker->date);
+$person2 = new Peep($faker->name, $faker->date);
+$person3 = new Peep($faker->name, $faker->date);
+
+dump($person1,
+    $person2,
+    $person3);
+
+dump(Peep::getAges([$person1, $person2, $person3])); // [52, 65, 15] (or there abouts)
