@@ -5,7 +5,7 @@ namespace App\Stuff\Things;
 class Potato
 {
     // properties
-    private $waterCount;
+    private $waterCount = 0;
 
     // methods
 
