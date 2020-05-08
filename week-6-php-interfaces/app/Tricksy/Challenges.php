@@ -9,7 +9,7 @@ class Challenges
         echo "\nTricksy Challenges\n";
 
         $this->alphabet();
-        $this->range();
+        // $this->range();
     }
 
     public function alphabet()
@@ -20,7 +20,7 @@ class Challenges
         $alphabet = new Alphabet();
 
         // logs A -> Z on separate lines
-        foreach ($alphabet as $letter) {
+        foreach ($alphabet as $key => $letter) {
             dump($letter);
         }
     }

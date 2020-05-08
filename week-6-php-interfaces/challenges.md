@@ -166,7 +166,7 @@ As before, for each question, create the class(es) in the correct namespace and 
 
 ### Challenges
 
-1) PHP has various built-in interfaces. One of these is called [`Iterator`](http://php.net/manual/en/class.iterator.php). If a class implements the `Iterator` interface you can use `foreach` with it. You'll need to read the `Iterator` documentation and look at the examples of each method.
+1) PHP has various built-in interfaces. One of these is called [`Iterator`](https://php.net/manual/en/class.iterator.php). If a class implements the `Iterator` interface you can use `foreach` with it. You'll need to read the `Iterator` documentation and look at the examples of each method.
 
     Create a class `Alphabet` in the `App\Tricksy` namespace, that implements the `Iterator` interface and then check that it works using `foreach`.
 
@@ -187,7 +187,7 @@ As before, for each question, create the class(es) in the correct namespace and 
     }
     ```
 
-1) Create a class `Range` in the `App\Tricksy` namespace, that implements the `Iterator` interface and then check that it works using `foreach`.
+2) Create a class `Range` in the `App\Tricksy` namespace, that implements the `Iterator` interface and then check that it works using `foreach`.
 
     ```php
     public function range()
