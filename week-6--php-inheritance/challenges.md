@@ -38,7 +38,7 @@ To check your answers run `php bootstrap.php`.
     }
     ```
 
-1) Create an `abstract` class `Language` in the `App\Languages` namespace. It should have a `$name` property and a `name()` method, which returns the language name. It should declare an abstract `hello()` method. Then create three child classes:
+2) Create an `abstract` class `Language` in the `App\Languages` namespace. It should have a `$name` property and a `name()` method, which returns the language name. It should declare an abstract `hello()` method. Then create three child classes:
 
     - `English`:
         - `name()`: "English"
@@ -73,7 +73,7 @@ To check your answers run `php bootstrap.php`.
     }
     ```
 
-1) Create a `Greeter` class in the `App\Greeter` namespace. It should take a `Language` object on creation. It should also have a `greet()` method which takes a name and gives back a greeting in the appropriate language.
+3) Create a `Greeter` class in the `App\Greeter` namespace. It should take a `Language` object on creation. It should also have a `greet()` method which takes a name and gives back a greeting in the appropriate language.
 
     ```php
     public function greet()

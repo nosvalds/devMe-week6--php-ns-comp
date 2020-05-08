@@ -2,10 +2,10 @@
 
 namespace App\Cutlery;
 
-class Spoon
+abstract class Spoon
 {
     // properties
-    private $scoops = 0;
+    protected $scoops = 0;
 
     // methods
 
