@@ -11,4 +11,12 @@ class Car extends Vehicle
     parent::setOperator($driver);
     return $this;
     }
+
+    // list occupants for a car
+    public function listOccupants()
+    {
+        return parent::getOccupants()->map(function ($person) {
+            return $person->fullName();
+        })->sort()->implode(", ");
+    }
 }
