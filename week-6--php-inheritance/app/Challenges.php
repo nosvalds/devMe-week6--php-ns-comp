@@ -15,8 +15,8 @@ class Challenges
         $this->languages();
         $this->greet();
 
-        // $tricksy = new Tricksy();
-        // $tricksy->start();
+        $tricksy = new Tricksy();
+        $tricksy->start();
     }
 
     public function spoon()
