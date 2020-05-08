@@ -13,7 +13,7 @@ class Challenges
         // load challenges
         $this->spoon();
         $this->languages();
-        // $this->greet();
+        $this->greet();
 
         // $tricksy = new Tricksy();
         // $tricksy->start();
