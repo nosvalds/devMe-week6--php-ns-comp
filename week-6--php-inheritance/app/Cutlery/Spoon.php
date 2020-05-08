@@ -2,7 +2,7 @@
 
 namespace App\Cutlery;
 
-abstract class Spoon
+class Spoon
 {
     // properties
     protected $scoops = 0;

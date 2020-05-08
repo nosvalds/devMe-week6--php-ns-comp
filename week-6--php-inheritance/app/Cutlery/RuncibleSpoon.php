@@ -6,8 +6,11 @@ class RuncibleSpoon extends Spoon
 {
     public function scoop() : RuncibleSpoon
     {
-        parent::scoop();
-        parent::scoop();
+        // alternative 
+        // parent::scoop();
+        // parent::scoop();
+        $this->scoops += 2;
+
         return $this;
     }
 }
