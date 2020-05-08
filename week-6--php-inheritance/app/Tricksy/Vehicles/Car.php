@@ -2,6 +2,8 @@
 
 namespace App\Tricksy\Vehicles;
 
+use App\Tricksy\Person;
+
 class Car extends Vehicle
 {
 
