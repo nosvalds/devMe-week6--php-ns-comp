@@ -2,7 +2,7 @@
 
 namespace App\Greeter;
 
-use App\Languages;
+use App\Languages\Language;
 
 class Greeter
 {
@@ -10,7 +10,7 @@ class Greeter
     private $language;
 
     // constructor
-    public function __construct(Languages\Language $language)
+    public function __construct(Language $language)
     {
         $this->language = $language;
     }
