@@ -5,28 +5,28 @@ namespace App\Library;
 class Shelf
 {
     // properties
-    private $books;
+    private $items;
 
     // constructor
     public function __construct()
     {
-        $this->books = collect(); // define empty collection
+        $this->items = collect(); // define empty collection of items
     }
 
     // methods
 
-    // add Book to shelf
-    public function addBook(Book $book) : Shelf // since Book is in the same namespace this is found by PHP without us explicitly telling PHP where it is.
+    // add item to shelf
+    public function addItem(TitledInterface $item) : Shelf 
     {
-        $this->books->push($book);
+        $this->items->push($item);
         return $this;
     }
 
     // display titles on the shelf
     public function titles() : array
     {
-        return $this->books->map(function (Book $book) {
-            return $book->getTitle();
+        return $this->items->map(function (TitledInterface $item) {
+            return $item->title();
         })->all();
     }
 }

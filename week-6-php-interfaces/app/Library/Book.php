@@ -2,7 +2,7 @@
 
 namespace App\Library;
 
-class Book 
+class Book implements TitledInterface
 {
     // properties
     private $title;
@@ -37,7 +37,7 @@ class Book
     }
 
     // get title
-    public function getTitle() : string
+    public function title() : string
     {
         return $this->title;
     }
