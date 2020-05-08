@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Spoon;
+namespace App\Cutlery;
 
 class Spoon
 {
