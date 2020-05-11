@@ -6,6 +6,7 @@
         "symfony/var-dumper": "^5.0",
         "illuminate/support": "^7.10",
         "nesbot/carbon": "^2.33",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "twig/twig": "^2.0"
     }
 }

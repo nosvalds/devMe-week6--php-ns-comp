@@ -147,3 +147,11 @@ for ($i = 1; $i < 100; $i += 1) {
   var_dump(validEmail($faker->email));
 }
 
+
+echo "\nUber-Tricksy Question 1\n";
+
+use App\Data\Post;
+
+$post = new Post("Blah");
+$post->setArticle("Blah blah blah");
+dump($post->render()); // big ole rendered HTML
