@@ -114,7 +114,7 @@ dump(Peep::getAges([$person1, $person2, $person3])); // random array
 
 echo "\nTricksy Question 2b\n";
 // use the factory to create a Faker\Generator instance
-$faker = Faker\Factory::create();
+// $faker = Faker\Factory::create();
 $faker->seed(1234);
 
 // generate data by accessing properties
@@ -130,4 +130,20 @@ $person3 = new Peep($faker->name, $faker->date);
 //     $person3);
 
 dump(Peep::getAges([$person1, $person2, $person3])); // random array
+
+function validEmail(string $str) : bool {
+  $str = preg_replace("/(^\s)|(\s$)/", "", $str); // remove beginning and ending spaces
+  return filter_var($str, FILTER_VALIDATE_EMAIL) === $str; // validate email
+}
+
+var_dump(validEmail(" blahf   ")); // bool(false)
+var_dump(validEmail(" blah@f")); // bool(false)
+var_dump(validEmail("blah@ fish.horse")); // bool(false)
+var_dump(validEmail(" blah@fish.horse")); // bool(true)
+var_dump(validEmail("blah@fish.horse ")); // bool(true)
+var_dump(validEmail(" blah@fish.horse ")); // bool(true)
+
+for ($i = 1; $i < 100; $i += 1) { 
+  var_dump(validEmail($faker->email));
+}
 
